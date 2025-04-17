@@ -245,7 +245,7 @@ const NewUserDialog = ({ onAddUser }: NewUserDialogProps) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    role: 'user',
+    role: 'user' as 'admin' | 'user', // Fix: Explicitly type role as 'admin' | 'user'
   });
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -255,7 +255,7 @@ const NewUserDialog = ({ onAddUser }: NewUserDialogProps) => {
     setFormData({
       name: '',
       email: '',
-      role: 'user',
+      role: 'user' as 'admin' | 'user',
     });
   };
   
